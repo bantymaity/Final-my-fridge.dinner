@@ -1,3 +1,6 @@
+---
+permalink: blog.html
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -392,10 +395,24 @@ textarea.f-ctl{min-height:130px;resize:vertical}
 <div class="sec-div"></div>
 <div style="max-width:1180px;margin:0 auto;padding:0 clamp(14px,4vw,32px)"><p class="more-lbl">More Stories from the Kitchen Journal</p></div>
 <div class="blog-grid">
-<article class="b-card" aria-labelledby="bh1"><div class="b-img"><img src="https://loremflickr.com/700/400/kitchen,cooking,food?lock=kitchen,cooking" alt="I Cooked 30 Dinners Using Only Fridge Staples — Here's What I Learned" width="700" height="394" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="bf" aria-hidden="true">🍳</div></div><div class="b-body"><span class="b-cat">Zero Waste</span><h3 id="bh1">I Cooked 30 Dinners Using Only Fridge Staples — Here's What I Learned</h3><div class="b-meta"><span>📅 March 2025</span><span>⏱ 8 min</span><span>Jamie Collins</span></div><p>One month, twelve ingredients, thirty dinners. No extra grocery shops. The results surprised everyone, including me.</p><button class="btn-rd" onclick="showStory('s1')" aria-expanded="false" aria-controls="s1">Read the Story →</button></div></article>
-<article class="b-card" aria-labelledby="bh2"><div class="b-img"><img src="https://loremflickr.com/700/400/pasta,italian,food?lock=pasta,italian" alt="The Five Pasta Recipes That Changed My Weeknight Cooking" width="700" height="394" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="bf" aria-hidden="true">🍝</div></div><div class="b-body"><span class="b-cat">Technique</span><h3 id="bh2">The Five Pasta Recipes That Changed My Weeknight Cooking</h3><div class="b-meta"><span>📅 April 2025</span><span>⏱ 6 min</span><span>Priya Nair</span></div><p>I thought pasta was boring fallback food. These five techniques turned a box of spaghetti into something I'd serve at a dinner party.</p><button class="btn-rd" onclick="showStory('s2')" aria-expanded="false" aria-controls="s2">Read the Story →</button></div></article>
-<article class="b-card" aria-labelledby="bh3"><div class="b-img"><img src="https://loremflickr.com/700/400/food,budget,food?lock=food,budget" alt="How I Halved My Food Bill By Learning to Love My Fridge" width="700" height="394" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="bf" aria-hidden="true">💰</div></div><div class="b-body"><span class="b-cat">Lifestyle</span><h3 id="bh3">How I Halved My Food Bill By Learning to Love My Fridge</h3><div class="b-meta"><span>📅 June 2025</span><span>⏱ 9 min</span><span>Sofía Herrera</span></div><p>I was throwing away £40 of food every week. Here's the exact mindset shift that fixed it completely.</p><button class="btn-rd" onclick="showStory('s3')" aria-expanded="false" aria-controls="s3">Read the Story →</button></div></article>
-<article class="b-card" aria-labelledby="bh4"><div class="b-img"><img src="https://loremflickr.com/700/400/butter,cooking,food?lock=butter,cooking" alt="Why Butter and Oil Are the Most Underestimated Ingredients in Any Kitchen" width="700" height="394" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="bf" aria-hidden="true">🧈</div></div><div class="b-body"><span class="b-cat">Fundamentals</span><h3 id="bh4">Why Butter and Oil Are the Most Underestimated Ingredients in Any Kitchen</h3><div class="b-meta"><span>📅 August 2025</span><span>⏱ 7 min</span><span>Marcus Bell</span></div><p>Every great dish starts with fat treated correctly. Once you understand what butter and oil each do — everything gets better overnight.</p><button class="btn-rd" onclick="showStory('s4')" aria-expanded="false" aria-controls="s4">Read the Story →</button></div></article>
+  {% for post in collections.post | reverse %}
+  <article class="b-card">
+    <div class="b-img">
+      <img src="{{ post.data.image }}" alt="{{ post.data.title }}" width="700" height="394" loading="lazy">
+    </div>
+    <div class="b-body">
+      <span class="b-cat">{{ post.data.category }}</span>
+      <h3>{{ post.data.title }}</h3>
+      <div class="b-meta">
+        <span>📅 {{ post.date.toDateString() }}</span>
+        <span>⏱ 5 min read</span>
+        <span>✍️ {{ post.data.author }}</span>
+      </div>
+      <p>{{ post.data.description }}</p>
+      <a href="{{ post.url }}" class="btn-rd">Read the Story →</a>
+    </div>
+  </article>
+  {% endfor %}
 </div>
 <section id="s1" class="story-section feat-art">
   <button class="btn-rd" onclick="hideStory('s1')" style="margin-bottom:28px">← Back to Blog</button>
