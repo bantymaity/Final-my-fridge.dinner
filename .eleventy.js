@@ -1,13 +1,16 @@
 module.exports = function(eleventyConfig) {
-  // আপনার যদি আলাদা কোনো ছবি, robots.txt বা sitemap থাকে, সেগুলোকে সরাসরি আউটপুটে পাঠাতে
+  // আপনার সমস্ত HTML এবং অন্যান্য প্রয়োজনীয় ফাইল সরাসরি লাইভ সাইটে কপি করার কমান্ড
+  eleventyConfig.addPassthroughCopy("*.html"); 
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     dir: {
-      input: ".", // বর্তমান ফোল্ডার থেকেই সব ফাইল নেবে
-      output: "_site", // ভার্সেল এই ফোল্ডারটাকে লাইভ করবে
-      includes: "_includes" // এর ভেতর আমরা ওয়েবসাইটের কমন হেডার-ফুটার টেমপ্লেট রাখব
-    }
+      input: ".", 
+      output: "_site", 
+      includes: "_includes" 
+    },
+    // কোন কোন ফরম্যাটের ফাইল প্রসেস হবে, তা নির্দিষ্ট করে দেওয়া
+    templateFormats: ["md", "njk", "html"] 
   };
 };
