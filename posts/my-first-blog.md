@@ -2,8 +2,11 @@
 layout: post.njk
 title: "The Ultimate Guide to Zero Waste Cooking"
 author: "Sourav"
+description: "Learn how to reduce food waste and cook better dinners."
+image: "https://loremflickr.com/700/400/kitchen,cooking"
+category: "Zero Waste"
+tags: post
 ---
-
 Welcome to the new MyFridgeDinner blog! This is my very first post written entirely in **Markdown**.
 
 ## Why this is awesome
