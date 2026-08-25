@@ -1,0 +1,11 @@
+{
+  "name": "myfridgedinner",
+  "version": "1.0.0",
+  "description": "Recipe Generator",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
