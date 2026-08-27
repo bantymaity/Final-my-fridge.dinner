@@ -1,5 +1,6 @@
 ---
 layout: post.njk
+tags: post
 title: "The 6 PM Fridge Stare: How I Turn Random Leftovers Into Nutrient-Packed Dinners"
 description: "Tired of staring at a half-empty fridge? Discover how to transform everyday staples, wilted greens, and forgotten leftovers into healthy, zero-waste weeknight meals."
 date: 2026-08-27
