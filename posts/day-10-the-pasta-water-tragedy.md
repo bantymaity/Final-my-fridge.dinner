@@ -3,7 +3,7 @@ layout: post.njk
 title: "The Drain Pipe Tragedy: Why I Stopped Pouring 'Liquid Gold' Down the Sink"
 tags: post
 description: "Stop pouring your pasta water away. Discover the food science of starch gelatinization, emulsification, and how this zero-waste byproduct is the secret to restaurant-quality sauces."
-date: 2026-09-011
+date: 2026-09-11
 category: "Cooking Technique"
 image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1180&auto=format&fit=crop"
 read_time: "10 min read"
