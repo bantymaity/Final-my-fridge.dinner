@@ -3,7 +3,7 @@ layout: post.njk
 title: "The Citrus Alchemy: Why Throwing Away Lemon Peels is a Culinary Crime"
 tags: post
 description: "Stop throwing away squeezed lemons. Learn the food science of limonene, the anatomy of citrus, and how to extract high-value essential oils using the ancient Oleo Saccharum method."
-date: 2026-09-14
+date: 2026-09-13
 category: "Budget Hacks"
 image: "https://images.unsplash.com/photo-1611078813632-61d00c4918df?q=80&w=1180&auto=format&fit=crop"
 read_time: "8 min read"
