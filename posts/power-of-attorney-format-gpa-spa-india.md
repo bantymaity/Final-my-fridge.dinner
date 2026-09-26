@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: post.njk
 tags: post
 title: "Power of Attorney Format in India: GPA vs SPA Drafts & Rules (2026)"
 description: "Need someone to manage your property or bank in India? Download free General and Special Power of Attorney formats, learn Supreme Court rules, and registration fees."
