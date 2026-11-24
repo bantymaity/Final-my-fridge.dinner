@@ -1,3 +1,6 @@
+---
+templateEngineOverride: njk
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -453,6 +456,42 @@ textarea.f-ctl{min-height:130px;resize:vertical}
   <div class="ad-inner"><p class="ad-lbl">Advertisement</p>
   <div class="ad-slot">Google AdSense Header Unit (728×90 / 320×50) — replace with &lt;ins class="adsbygoogle"&gt;</div></div>
 </aside>
+  <!-- ══ LATEST ZERO-WASTE GUIDES (AUTO-UPDATED BY ELEVENTY) ══ -->
+  <section id="latest-guides" aria-labelledby="guides-h2" style="padding:clamp(44px,7vw,72px) 0 0">
+    <div style="text-align:center;max-width:1180px;margin:0 auto clamp(24px,4vw,38px);padding:0 clamp(14px,4vw,32px)">
+      <p class="more-lbl" style="margin-bottom:8px">📰 Kitchen Science &amp; Zero-Waste</p>
+      <h2 id="guides-h2" style="color:var(--tx);margin-bottom:8px">Latest Zero-Waste Masterclasses</h2>
+      <p style="color:var(--txm);font-size:.95rem;max-width:560px;margin:0 auto">Science-backed food safety, storage hacks, and zero-waste techniques to stretch your grocery budget.</p>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in collections.post | reverse %}
+        {% if loop.index <= 6 %}
+        <article class="b-card">
+          {% if post.data.image %}
+          <a href="{{ post.url }}" class="b-img" style="display:block">
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="bf">🥘</div>
+          </a>
+          {% endif %}
+          <div class="b-body">
+            {% if post.data.category %}<span class="b-cat">{{ post.data.category }}</span>{% endif %}
+            <h3><a href="{{ post.url }}" style="color:inherit">{{ post.data.title }}</a></h3>
+            {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+            <div class="b-meta">
+              {% if post.data.read_time %}<span>⏱ {{ post.data.read_time }}</span>{% endif %}
+            </div>
+            <a href="{{ post.url }}" class="btn-rd">Read Guide →</a>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center;margin-top:-20px;margin-bottom:clamp(28px,5vw,48px)">
+      <a href="blog.html" class="btn-rd" style="padding:11px 24px;font-size:.86rem">Explore All Zero-Waste Guides →</a>
+    </div>
+  </section>
 
 
   <!-- ══ FAQ — VISIBLE ON PAGE + MATCHES FAQPage JSON-LD ABOVE ══ -->
